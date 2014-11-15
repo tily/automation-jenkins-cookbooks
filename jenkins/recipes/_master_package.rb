@@ -44,8 +44,8 @@ when 'rhel'
   include_recipe 'yum::default'
 
   yum_repository 'jenkins-ci' do
-    baseurl 'http://pkg.jenkins-ci.org/redhat'
-    gpgkey  'https://jenkins-ci.org/redhat/jenkins-ci.org.key'
+    url 'http://pkg.jenkins-ci.org/redhat'
+    key 'https://jenkins-ci.org/redhat/jenkins-ci.org.key'
   end
 
   package 'jenkins' do
